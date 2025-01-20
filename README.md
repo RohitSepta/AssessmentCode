@@ -27,20 +27,8 @@ This project provides an API for managing products, calculating dynamic prices b
 #### Example Request for Creating a Product:
 - **Request Body**:
 
-```json
-{
-    "name": "Winter Jacket",
-    "description": "Warm winter jacket",
-    "base_price": "100.00",
-    "product_type": "seasonal",
-    "seasonal_details": {
-        "season": "WINTER",
-        "season_discount": "0.20",
-        "off_season_discount": "0.05"
-    }
-}
 
-## Discount Information 
+##Discount Information 
 
 ### Features
 - **Discount List & Create**: View all Discount and create new Discount.
