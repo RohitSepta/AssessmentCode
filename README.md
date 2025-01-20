@@ -2,7 +2,9 @@
 
 This project provides an API for managing products, calculating dynamic prices based on quantity, and applying different discount strategies for seasonal and bulk products. The API supports standard CRUD operations and price calculations.
 
-## Features
+## Product Information 
+
+### Features
 - **Product List & Create**: View all products and create new products.
 - **Product Detail**: Retrieve, update, or delete specific products.
 - **Price Calculation**: Calculate the price of a product based on its quantity, applying any relevant discounts.
@@ -13,11 +15,14 @@ This project provides an API for managing products, calculating dynamic prices b
 
 ### Product List & Create
 
-- **GET** `/api/products/`  
+- **GET** `product_info/products/`  
   Retrieves a list of all products.
 
-- **POST** `/api/products/`  
+- **POST** `product_info/products/`  
   Creates a new product.
+
+- **GET** `product_info/products/<int:pk>/`
+  Calculate price with quantity
 
 #### Example Request for Creating a Product:
 - **Request Body**:
