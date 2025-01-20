@@ -39,3 +39,41 @@ This project provides an API for managing products, calculating dynamic prices b
         "off_season_discount": "0.05"
     }
 }
+
+## Discount Information 
+
+### Features
+- **Discount List & Create**: View all Discount and create new Discount.
+- **Discount Detail**: Retrieve, update, or delete specific Discount.
+- **Price Calculation**: Calculate the price of a product based on its quantity, applying any relevant discounts.
+- **Seasonal Discount**: Create Discounts with seasonal discounts.
+- **Bulk Discount**: Create Discounts with bulk purchase discounts.
+
+## API Endpoints
+
+### Discount List & Create
+
+- **GET** `discount_info/discounts/`  
+  Retrieves a list of all discounts.
+
+- **POST** `discount_info/discounts/`  
+  Creates a new product.
+
+- **GET** `discount_info/discounts/<int:pk>/`
+  Calculate price with quantity
+
+#### Example Request for Creating a Discount:
+- **Request Body**:
+
+```json
+{
+    "name": "Summer Sale",
+    "description": "20% off on all items",
+    "discount_type": "percentage",
+    "start_date": "2025-06-01T00:00:00Z",
+    "end_date": "2025-08-31T23:59:59Z",
+    "percentage_discount": {
+        "percentage": 20.00,
+        "min_purchase_amount": 50.00
+    }
+}
